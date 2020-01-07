@@ -1,0 +1,56 @@
+body {
+	margin-top: 50px;
+	background-color: #751aff;
+}
+
+canvas {
+	z-index: 0;
+}
+
+button {
+	z-index: 2;
+}
+
+#menuPane {
+	position: absolute;
+	left: 170px;
+	top: 50px;
+	padding: 0px 1024px 511px 0px;
+	background: rgba(0, 0, 0, 0);
+	z-index: 1;
+}
+
+#menuPane p {
+	position: absolute;
+	color: #EEEEEE;
+	margin-top: 190px;
+	margin-left: 30px;
+}
+
+.menuButton {
+	position: absolute;
+	line-height: 60px;
+	font-weight: bold;
+	padding: 0 40px;
+	background: #13ec13;
+	border: thin solid rgba(0, 0, 0, 0.6);
+	border-radius: 5px;
+}
+
+.menuButton:hover {
+	background: #66ff66;
+}
+
+#startButton {
+	margin-top: 440px;
+	margin-left: 430px;
+}
+
+#musicLine {
+	margin-left: auto;
+    margin-right: auto;
+	background: rgba(0, 0, 0, 0);
+	color: #FFFFFF;
+	opacity: 0.2;
+	text-align: center;
+}
