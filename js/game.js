@@ -257,6 +257,7 @@ function progressGameDifficulty() {
 
 function onPlayerDeath() {
 	player.dead = true;
+	player.score = 0;
 	showGameMenu();
 }
 
@@ -441,7 +442,7 @@ var update = function(elapsed) {
 					}
 					break;
 				} else {
-					if(enemies[i].x <= gameBackground.trueMaxX) { // only check for collision when barney is in the player's safe zone (EFFICIENCY)
+					if(enemies[i].x <= gameBackground.trueMaxX) { // only check for collision when enemies are in the player's safe zone (EFFICIENCY)
 						if(testCollisionBoundingBox(player.x, player.y, player.width, player.height, enemies[i].x, enemies[i].y, enemies[i].width, enemies[i].height)) {
 							onEnemyDeath(i, false);
 							player.health -= intRandom(20, 50);
@@ -494,7 +495,7 @@ var render = function() {
 					ctx.fillStyle = "#B1FB17";
 					ctx.font = "bold 15px Georgia";
 					ctx.textAlign = "center";
-					ctx.fillText(player.score + " Barneys Destroyed", canvas.width * 0.5, canvas.height * 0.55);
+					ctx.fillText(player.score + " Enemies Destroyed", canvas.width * 0.5, canvas.height * 0.55);
 				}
 			}
 			break;
