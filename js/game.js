@@ -231,6 +231,7 @@ function setGameDefaults() {
 	player.y = intRandom(gameBackground.minY, gameBackground.maxY);
 	player.health = playerMaxHealth;
 	player.dead = false;
+	player.score = 0;
 	gameTime = 0;
 	lastEnemySpawnThreshold = 1200;
 }
@@ -257,7 +258,6 @@ function progressGameDifficulty() {
 
 function onPlayerDeath() {
 	player.dead = true;
-	player.score = 0;
 	showGameMenu();
 }
 
@@ -521,7 +521,7 @@ var render = function() {
 				ctx.fillStyle = "#B1FB17";
 				ctx.font = "bold 15px Georgia";
 				ctx.textAlign = "center";
-				ctx.fillText(player.score + " Barneys Destroyed", canvas.width * 0.5, 17);
+				ctx.fillText(player.score + " Enemies Destroyed", canvas.width * 0.5, 17);
 
 				ctx.globalAlpha = 0.2;
 				ctx.beginPath();
